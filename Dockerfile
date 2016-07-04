@@ -1,12 +1,11 @@
-# Dockerizing Jenkins and Go related plugins along with a
-
+# Dockerizing Jenkins and Go 
 FROM       ubuntu:latest
 
 ENV JENKINS_HOME /var/lib/jenkins
 
 # Install aptitude packages
-RUN apt-get update
-RUN apt-get install -y git openjdk-8-jre python-pip software-properties-common wget bzr mercurial unzip
+RUN apt-get update --fix-missing
+RUN apt-get install -y git openjdk-8-jre software-properties-common wget
 
 # Install go
 RUN wget -q https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
