@@ -31,6 +31,10 @@ RUN wget -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/jobCon
 RUN wget -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/plot.hpi
 RUN wget -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/token-macro.hpi
 RUN wget -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/xunit.hpi
+RUN wget -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/envinject.hpi
+RUN wget -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/envfile.hpi
+RUN wget -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/github.hpi
+
 COPY warnings.hpi /var/lib/jenkins/plugins/warnings.hpi
 COPY config.xml /var/lib/jenkins/jobs/GolangTemplate/config.xml
 
